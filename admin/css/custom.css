@@ -1,0 +1,11 @@
+tbody button {
+  background: none;
+  border-radius: 10px;
+  border: 1px solid #00a2f9;
+  color: #00a2f9;
+  transition: all 0.3s;
+}
+tbody button:hover {
+  background: #00a2f9;
+  color: white;
+}
