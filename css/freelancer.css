@@ -390,7 +390,14 @@ a:active {
 }
 
 .meh {
+  background: rgba(50, 185, 156, 0.71);
+  display: none;
+  opacity: 0;
   height: 85%;
+  transition: all 0.3s;
+}
+.meh:hover {
+  opacity: 1;
 }
 .portfolio h3 {
   text-align: center;
