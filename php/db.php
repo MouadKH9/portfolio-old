@@ -112,5 +112,15 @@
                 $res = $conn->query($query) or die($conn->error);
                 header("Location: ../admin/");
             }
+            public static function checkLogin($email,$password){
+                $conn = DB::connect();
+                $res = $conn->query("SELECT * FROM admins WHERE email = '$email'");
+                if($res->num_rows == 0) return false;
+                while($row = $res->fetch_assoc()){
+                    if(password_verify($password,$row['password'])) return $row;
+                }
+                return false;
+            }
         }
+
 ?>

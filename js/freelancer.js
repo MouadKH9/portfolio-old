@@ -48,8 +48,10 @@
   var navbarCollapse = function() {
     if ($("#mainNav").offset().top > 100) {
       $("#mainNav").addClass("navbar-shrink");
+      $("#mainNav").removeClass("bgi");
     } else {
       $("#mainNav").removeClass("navbar-shrink");
+      $("#mainNav").addClass("bgi");
     }
   };
   // Collapse now if page is not at top
@@ -85,4 +87,6 @@
         $(this).removeClass("floating-label-form-group-with-focus");
       });
   });
+  //Particles
+  particlesJS.load("particles-js", "js/particles.json");
 })(jQuery); // End of use strict

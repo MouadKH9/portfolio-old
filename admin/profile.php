@@ -1,5 +1,8 @@
 <?php 
   require_once "../php/db.php";
+  session_start();
+  if(!isset($_SESSION['user']))
+      header("Location: login.php");
   $config = DB::getConfig();
 ?>
 <!DOCTYPE html>
@@ -66,55 +69,7 @@
       <!-- ============================================================== -->
       <!-- Topbar header - style you can find in pages.scss -->
       <!-- ============================================================== -->
-      <nav class="navbar navbar-default navbar-static-top m-b-0">
-        <div class="navbar-header">
-          <div class="top-left-part">
-            <!-- Logo -->
-            <a class="logo" href="index.html">
-              <!-- Logo icon image, you can use font-icon also --><b>
-                <!--This is dark logo icon--><img
-                  src="../plugins/images/admin-logo.png"
-                  alt="home"
-                  class="dark-logo"
-                /><!--This is light logo icon--><img
-                  src="../plugins/images/admin-logo-dark.png"
-                  alt="home"
-                  class="light-logo"
-                />
-              </b>
-              <!-- Logo text image you can use text also --><span
-                class="hidden-xs"
-              >
-                <!--This is dark logo text--><img
-                  src="../plugins/images/admin-text.png"
-                  alt="home"
-                  class="dark-logo"
-                /><!--This is light logo text--><img
-                  src="../plugins/images/admin-text-dark.png"
-                  alt="home"
-                  class="light-logo"
-                />
-              </span>
-            </a>
-          </div>
-          <!-- /Logo -->
-          <ul class="nav navbar-top-links navbar-right pull-right">
-            <li>
-              <a class="profile-pic" href="#">
-                <img
-                  src="../plugins/images/users/varun.jpg"
-                  alt="user-img"
-                  width="36"
-                  class="img-circle"
-                /><b class="hidden-xs">Steave</b></a
-              >
-            </li>
-          </ul>
-        </div>
-        <!-- /.navbar-header -->
-        <!-- /.navbar-top-links -->
-        <!-- /.navbar-static-side -->
-      </nav>
+      <?php require_once "parts/nav.php"?>
       <!-- End Top Navigation -->
       <!-- ============================================================== -->
       <!-- Left Sidebar - style you can find in sidebar.scss  -->
@@ -193,7 +148,7 @@
                   class="form-horizontal form-material"
                 >
                   <div class="form-group">
-                    <label for="username" class="col-md-12">Username</label>
+                    <label for="username" class="col-md-12">Display name:</label>
                     <div class="col-md-12">
                       <input
                         type="text"

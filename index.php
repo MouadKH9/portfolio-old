@@ -37,9 +37,9 @@
   <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+    <nav class="navbar navbar-expand-lg bg-secondary bgi fixed-top text-uppercase" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Mouad K.</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img id="logo" src="logo-line.png" alt="Mouad K"></a>
         <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
@@ -63,11 +63,12 @@
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
       <div class="container">
-        <img class="img-fluid mb-5 d-block mx-auto" src="<?php echo substr($config['image'],1,strlen($config['image'])) ?>" alt="">
+        <img class="mb-5 d-block mx-autol logo" src="<?php echo substr($config['image'],1,strlen($config['image'])) ?>" alt="">
         <h1 class="text-uppercase mb-0"><?php echo $config['username'] ?></h1>
         <hr class="star-light">
         <h2 class="font-weight-light mb-0"><?php echo $config['description'] ?></h2>
       </div>
+      <div id="particles-js" ></div>
     </header>
 
     <!-- Portfolio Grid Section -->
@@ -108,8 +109,8 @@
           </div>
         </div>
         <div class="text-center mt-4">
-          <a class="btn btn-xl btn-outline-light  js-scroll-trigger" href="#contact">
-            <i class="fas fa-download mr-2"></i>
+          <a id="focus" class="btn btn-xl btn-outline-light  js-scroll-trigger" href="#contact">
+           <i class="fas fa-envelope"></i>
             Contact me!
           </a>
         </div>
@@ -169,11 +170,14 @@
     <footer class="footer text-center">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 mb-5 mb-lg-0">
+          <div class="col-md-4 mb-5 mb-lg-0">
             <h4 class="text-uppercase mb-4">Location</h4>
             <p class="lead mb-0">Tangier, Morocco</p>
           </div>
-          <div class="col-md-6 mb-5 mb-lg-0">
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <img src="logo.png" class="logo-footer">
+          </div>
+          <div class="col-md-4 mb-5 mb-lg-0">
             <h4 class="text-uppercase mb-4">Around the Web</h4>
             <ul class="list-inline mb-0">
               <li class="list-inline-item">
@@ -250,10 +254,11 @@
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
-
+    <script src="js/particles.js"></script>
     <!-- Custom scripts for this template -->
-    <script src="js/freelancer.min.js"></script>
+    <script src="js/freelancer.js"></script>
     <!-- Main js -->
+    
     <script src="js/main.js"></script>
 
   </body>

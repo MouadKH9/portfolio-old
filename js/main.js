@@ -12,7 +12,7 @@ function showMore(id) {
     $("#portfolio-modal .tags").html("");
     project.tags.forEach(tag => {
       $("#portfolio-modal .tags").append(
-        `<a href='index.php?tag=${tag}'>${tag}</a>`
+        `<a href='index.php?tag=${tag}#portfolio'>${tag}</a>`
       );
     });
   });

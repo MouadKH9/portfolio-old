@@ -172,6 +172,7 @@ section h2 {
 header.masthead {
   padding-top: calc(6rem + 72px);
   padding-bottom: 6rem;
+  height: 100vh;
 }
 
 header.masthead h1 {
@@ -425,4 +426,33 @@ a:hover {
 }
 #portfolio-modal .tags a:hover {
   background: #455463;
+}
+
+.logo {
+  max-height: 170px;
+  margin: 0 auto;
+  /* background: #2c3e50;
+  border-radius: 65px;
+  padding: 25px 0px; */
+}
+
+.logo-footer {
+  max-height: 100px;
+}
+.bgi {
+  background: transparent !important;
+}
+.bgi img {
+  display: none;
+}
+.bgi a:hover {
+  color: #1a252f !important;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
