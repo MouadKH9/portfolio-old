@@ -89,4 +89,19 @@
   });
   //Particles
   particlesJS.load("particles-js", "js/particles.json");
+  $(window).resize(function() {
+    checkLayout();
+  });
+  $(document).ready(function() {
+    $(".loading-scr").hide();
+  });
+  checkLayout();
+  function checkLayout() {
+    if ($(window).width() > 700) {
+      $(".abs").removeClass("container");
+    } else {
+      $(".abs").addClass("container");
+    }
+  }
+  // $("div").last().hide();
 })(jQuery); // End of use strict

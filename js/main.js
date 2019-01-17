@@ -9,6 +9,12 @@ function showMore(id) {
       "src",
       project.image.substring(1, project.image.length)
     );
+    if (project.link != "none") {
+      $("#portfolio-modal #link").attr("href", project.link);
+      $("#portfolio-modal #link").show();
+    } else {
+      $("#portfolio-modal #link").hide();
+    }
     $("#portfolio-modal .tags").html("");
     project.tags.forEach(tag => {
       $("#portfolio-modal .tags").append(

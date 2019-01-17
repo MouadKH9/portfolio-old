@@ -7,12 +7,14 @@
         var $date;
         var $tags = array();
         var $views;
-        public function __construct($id,$name,$description,$image,$date,$tags,$views) {
+        var $link;
+        public function __construct($id,$name,$description,$image,$date,$tags,$link,$views) {
             $this->id = $id;
             $this->name = $name;
             $this->description = $description;
             $this->image = $image;
             $this->date = $date;
+            $this->link = $link;
             $this->views = $views;
             $tags_arr = explode(",",$tags);
             foreach ($tags_arr as $tag)

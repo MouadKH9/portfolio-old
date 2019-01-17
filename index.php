@@ -44,7 +44,7 @@
           Menu
           <i class="fas fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="collapse navbar-collapse text-center" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
@@ -62,7 +62,7 @@
 
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
-      <div class="container">
+      <div class="abs container">
         <img class="mb-5 d-block mx-autol logo" src="<?php echo substr($config['image'],1,strlen($config['image'])) ?>" alt="">
         <h1 class="text-uppercase mb-0"><?php echo $config['username'] ?></h1>
         <hr class="star-light">
@@ -75,6 +75,10 @@
     <section class="portfolio" id="portfolio">
       <div class="container">
         <h2 class="text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+        <?php if (isset($_GET['tag'])) {
+          ?>
+            <h5 class='tag text-muted text-center'>tag : <?php echo $_GET['tag'] ?></h5>
+          <?php } ?>
         <hr class="star-dark mb-5">
         <div class="row">
           <?php
@@ -185,18 +189,13 @@
                   <i class="fab fa-fw fa-facebook-f"></i>
                 </a>
               </li>
-              <!-- <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-google-plus-g"></i>
-                </a>
-              </li> -->
-              <!-- <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-twitter"></i>
-                </a>
-              </li> -->
               <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="www.linkedin.com/in/MouadK">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-github"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/in/MouadK">
                   <i class="fab fa-fw fa-linkedin-in"></i>
                 </a>
               </li>
@@ -219,6 +218,20 @@
       </a>
     </div>
 
+    <div class="loading-scr">
+      <div id="circle">
+        <div class="loader">
+          <div class="loader">
+              <div class="loader">
+                <div class="loader">
+
+                </div>
+              </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+              
     <!-- Portfolio Modals -->
 
     <div class="portfolio-modal mfp-hide" id="portfolio-modal">
@@ -232,6 +245,7 @@
               <h2 class="text-secondary text-uppercase mb-0"></h2>
               <hr class="star-dark mb-5">
               <img class="img-fluid mb-5" src="img/portfolio/cabin.png" alt="">
+              <a id="link"><i class="fa fa-link" aria-hidden="true"></i> Link</a>
               <p class="mb-5"></p>
               <div class="tags">
               </div>

@@ -14,7 +14,7 @@
             $ret = array();
             
             while($row = $res->fetch_assoc())
-                array_push($ret,new Project($row['id'],$row['name'],$row['description'],$row['image'],$row['date'],$row['tags'],DB::getViews($row['id'])));
+                array_push($ret,new Project($row['id'],$row['name'],$row['description'],$row['image'],$row['date'],$row['tags'],$row['link'],DB::getViews($row['id'])));
             return $ret;
         }
         public static function get($id){
@@ -25,7 +25,7 @@
                 $conn->query("INSERT INTO views VALUES ($id,'$IP')") or die($conn->error);
             $res = $conn->query("SELECT * FROM projects WHERE id = $id") or die($conn->error);
             while($row = $res->fetch_assoc())
-                $ret = new Project($row['id'],$row['name'],$row['description'],$row['image'],$row['date'],$row['tags'],DB::getViews($row['id']));
+                $ret = new Project($row['id'],$row['name'],$row['description'],$row['image'],$row['date'],$row['tags'],$row['link'],DB::getViews($row['id']));
             return $ret;
         }
         public static function getViews($id){
